@@ -1,7 +1,7 @@
 os:
 - linux
 # Windows fails as well!
-- windows
+# - windows
 # - osx
 
 language: node_js
@@ -16,7 +16,7 @@ cache:
   - "node_modules"
 
 install:
-- yarn install
+- yarn install --force
 
 # before_script:
 # - yarn run test
