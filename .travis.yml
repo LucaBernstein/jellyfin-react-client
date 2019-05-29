@@ -1,13 +1,14 @@
 os:
 - linux
-- osx
 - windows
+# - osx
 
 language: node_js
 node_js:
-- '6'
 - '8'
 - '10'
+- 'lts/*'
+- 'node'
 
 cache:
 - apt: true
@@ -18,8 +19,18 @@ install:
 - yarn install
 - yarn update
 
-before_script: yarn test
-after_success: yarn run release
+before_script:
+- yarn run test
+- yarn run test:web
+- yarn run preweb:release
+- yarn run preandroid
+- yarn run preelectron
+after_success:
+- yarn run android:release
+- yarn run ios:release
+- yarn run windows:release
+- yarn run electron:release
+- yarn run web:release
 branches:
   only:
   - master
