@@ -17,8 +17,8 @@ install:
 - yarn install
 
 before_script:
-- yarn run test
-- yarn run test:web
+# - yarn run test
+# - yarn run test:web
 - yarn run preweb:release
 - yarn run preandroid
 - yarn run preelectron
