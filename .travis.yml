@@ -1,0 +1,36 @@
+os:
+- linux
+- windows
+# - osx
+
+language: node_js
+node_js:
+- 'lts/*'
+- 'node'
+
+cache:
+- yarn: true
+# - apt: true
+- directories:
+  - "node_modules"
+  
+install:
+- yarn install
+
+before_script:
+# - yarn run test
+# - yarn run test:web
+- yarn run preweb:release
+# Wait for: https://github.com/jellyfin/jellyfin-react-client/pull/18
+# - yarn run preandroid
+- yarn run preelectron
+after_success:
+- yarn run android:release
+- yarn run ios:release
+- yarn run windows:release
+- yarn run electron:release
+- yarn run web:release
+# branches:
+#   only:
+#   - master
+#   - /^v\d+\.\d+\.\d+/
