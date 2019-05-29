@@ -18,10 +18,10 @@ cache:
 install:
 - yarn install
 
-before_script:
+# before_script:
 # - yarn run test
 # - yarn run test:web
-- yarn run preweb:release
+# - yarn run preweb:release
 
 # Wait for: https://github.com/jellyfin/jellyfin-react-client/pull/18
 # - yarn run preandroid
