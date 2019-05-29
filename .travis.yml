@@ -21,7 +21,8 @@ before_script:
 # - yarn run test
 # - yarn run test:web
 - yarn run preweb:release
-- yarn run preandroid
+# Wait for: https://github.com/jellyfin/jellyfin-react-client/pull/18
+# - yarn run preandroid
 - yarn run preelectron
 after_success:
 - yarn run android:release
