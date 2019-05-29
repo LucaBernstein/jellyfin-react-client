@@ -5,8 +5,6 @@ os:
 
 language: node_js
 node_js:
-- '8'
-- '10'
 - 'lts/*'
 - 'node'
 
@@ -17,7 +15,6 @@ cache:
   
 install:
 - yarn install
-- yarn update
 
 before_script:
 - yarn run test
