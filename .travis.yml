@@ -1,7 +1,7 @@
 os:
 - linux
 # Windows fails as well!
-# - windows
+- windows
 # - osx
 
 language: node_js
