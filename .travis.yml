@@ -13,7 +13,7 @@ cache:
 # - apt: true
 - directories:
   - "node_modules"
-  
+
 install:
 - yarn install
 
@@ -21,9 +21,14 @@ before_script:
 # - yarn run test
 # - yarn run test:web
 - yarn run preweb:release
+
 # Wait for: https://github.com/jellyfin/jellyfin-react-client/pull/18
 # - yarn run preandroid
-- yarn run preelectron
+
+# ./node_modules/write-file-atomic/index.js
+# Module not found: Can't resolve 'worker_threads' in '/home/travis/build/LucaBernstein/jellyfin-react-client/node_modules/write-file-atomic'
+# - yarn run preelectron
+
 after_success:
 - yarn run android:release
 - yarn run ios:release
