@@ -31,7 +31,7 @@ after_success:
 - yarn run windows:release
 - yarn run electron:release
 - yarn run web:release
-branches:
-  only:
-  - master
-  - /^v\d+\.\d+\.\d+/
+# branches:
+#   only:
+#   - master
+#   - /^v\d+\.\d+\.\d+/
