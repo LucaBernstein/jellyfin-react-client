@@ -9,7 +9,8 @@ node_js:
 - 'node'
 
 cache:
-- apt: true
+- yarn: true
+# - apt: true
 - directories:
   - "node_modules"
   
